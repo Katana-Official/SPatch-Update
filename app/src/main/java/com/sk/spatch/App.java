@@ -1,12 +1,14 @@
 package com.sk.spatch;
 
 import android.app.Application;
-import com.tencent.tinker.loader.app.TinkerApplication;
 
-public class App extends TinkerApplication {
-  public App() { super(15, VAPPLike.class.getName()); }
-  
-  public static Application getApp() { return VAPPLike.getApp().getApplication(); }
+public class App extends Application {
+	static Object gApp;
+	public()
+	{
+		gApp = this;
+	}
+  public static Application getApp() { return (Application)gApp; }
 }
 
 
