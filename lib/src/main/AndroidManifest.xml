@@ -1,0 +1,3301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sk.svm.qihoo">
+
+    <permission
+        android:name="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+        android:protectionLevel="signature" />
+
+    <!-- unknown -->
+    <uses-permission android:name="android.permission.WRITE_SOCIAL_STREAM" />
+    <uses-permission android:name="android.permission.READ_SOCIAL_STREAM" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.WRITE_PROFILE" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <!-- samsung start -->
+    <uses-permission android:name="com.samsung.svoice.sync.READ_DATABASE" />
+    <uses-permission android:name="com.samsung.svoice.sync.ACCESS_SERVICE" />
+    <uses-permission android:name="com.samsung.svoice.sync.WRITE_DATABASE" />
+    <uses-permission android:name="com.sec.android.app.voicenote.Controller" />
+    <uses-permission android:name="com.sec.android.permission.VOIP_INTERFACE" />
+    <uses-permission android:name="com.sec.android.permission.LAUNCH_PERSONAL_PAGE_SERVICE" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.READ_RECORD_AUDIO" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_RECORD_AUDIO" />
+    <uses-permission android:name="com.sec.android.settings.permission.SOFT_RESET" />
+    <uses-permission android:name="sec.android.permission.READ_MSG_PREF" />
+    <uses-permission android:name="com.samsung.android.scloud.backup.lib.read" />
+    <uses-permission android:name="com.samsung.android.scloud.backup.lib.write" />
+    <!-- samsung end -->
+
+    <!-- other app start -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL" />
+    <uses-permission android:name="com.android.voicemail.permission.READ_WRITE_ALL_VOICEMAIL" />
+    <uses-permission android:name="com.huawei.authentication.HW_ACCESS_AUTH_SERVICE" />
+    <!-- other app end -->
+
+    <!-- google play store start -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <!-- google play store end -->
+
+    <!-- google services framework start -->
+    <uses-permission android:name="com.google.android.providers.talk.permission.READ_ONLY" />
+    <uses-permission android:name="com.google.android.providers.talk.permission.WRITE_ONLY" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID_NOTIFICATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- google services framework end -->
+
+    <!-- shortcut and badge start -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
+
+    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.teslacoilsw.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.actionlauncher.playstore.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.mx.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.anddoes.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.apusapps.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.tsf.shell.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.lenovo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.bbk.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.s.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="cn.nubia.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <!-- shortcut and badge end -->
+    <!-- 常用 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <!-- 位置服务 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 网络 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- sdcard -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 电量 -->
+    <uses-permission
+        android:name="android.permission.BATTERY_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 身体传感器 -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- 锁屏-->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 允许应用程序展开或折叠状态栏 -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <!-- 账号相关 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- 通话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 修改当前配置-->
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 设置 -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 最近任务/进程 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- nfc -->
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 指纹 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <!-- 下面自己按需保留 -->
+
+    <!-- browser history start -->
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
+    <!-- browser history end -->
+
+    <!-- 清空应用缓存-->
+    <uses-permission
+        android:name="android.permission.CLEAR_APP_CACHE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <!-- 同步设置 -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <!-- rss -->
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ" />
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE" />
+    <!-- 日历 -->
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <!-- 通讯录 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 系统日志 -->
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 重启应用 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 时间/时区 -->
+    <uses-permission
+        android:name="android.permission.SET_TIME"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.SET_TIME_ZONE"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 墙纸 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <!-- 红外线 -->
+    <uses-permission android:name="android.permission.TRANSMIT_IR" />
+
+    <!-- SIP服务 -->
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <!-- 唤醒屏幕 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- float window -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <!-- boot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- system app start -->
+    <uses-permission
+        android:name="android.permission.GET_INTENT_SENDER_INTENT"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.BIND_DIRECTORY_SEARCH"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.UPDATE_APP_OPS_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.CLEAR_APP_USER_DATA"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.ACCESS_CACHE_FILESYSTEM"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.DEVICE_POWER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_APN_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.BIND_APPWIDGET"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.ACCOUNT_MANAGER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- system app end -->
+    <!-- not found -->
+    <uses-permission android:name="android.permission.READ_INSTALL_SESSIONS" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.READ_CELL_BROADCASTS" />
+    <uses-permission android:name="android.permission.WRITE_CLIPS" />
+    <uses-permission android:name="android.permission.READ_CLIPS" />
+    <uses-permission android:name="android.permission.GET_CLIPS" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_WIMAX_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.CHANGE_WIMAX_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <application>
+        <service
+            android:name="com.sk.stub.StubApplicationMisc$KeepAliveService"
+            android:process=":x" />
+
+        <service
+            android:name="com.sk.stub.ExtraSvc$SvcNotification"
+            android:process=":x" />
+
+        <activity
+            android:excludeFromRecents="true"
+            android:name="com.sk.stub.ExtraActivity$ShortcutActivity"
+            android:exported="true"
+            android:process=":x"
+            android:taskAffinity="virtual.shortcut.task"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="${applicationId}.sklauncher.shortcut" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.sk.stub.SKOverflowStub$SKOverflowActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":x"
+            android:taskAffinity="com.sk.svm.virtual.pending" />
+
+        <service
+            android:name="com.sk.stub.SKOverflowStub$SKOverflowServices"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":x" />
+        <receiver
+            android:name="com.sk.stub.SKOverflowStub$SKOverflowReceiver"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":x" />
+
+        <service
+            android:name="com.sk.stub.ExtraSvc$SKStubJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":x" />
+
+        <service
+            android:name="com.sk.stub.ExtraSvc$SKStubJobWorkService"
+            android:process=":x" />
+
+        <activity
+            android:name="com.sk.stub.StubApplicationMisc$ChooseAccountTypeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":x"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.sk.stub.StubApplicationMisc$ChooseTypeAndAccountActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":x"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.sk.stub.StubApplicationMisc$ChooserActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":x"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.sk.svm.virtual.choose"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.ExtraActivity$ResolverActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":x"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.sk.svm.virtual.choose"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+
+        <provider
+            android:name="com.sk.svm.SvcProvider"
+            android:authorities="${AUTHORITY_PREFIX}.qihoo.SvcProvider"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":x" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P0"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p0"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P1"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p1"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P2"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p2"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P3"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p3"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P4"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p4"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P5"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p5"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P6"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p6"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P7"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p7"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P8"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p8"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P9"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p9"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P10"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p10"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P11"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p11"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P12"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p12"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P13"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p13"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P14"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p14"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P15"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p15"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P16"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p16"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P17"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p17"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P18"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p18"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P19"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p19"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P20"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p20"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P21"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p21"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P22"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p22"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P23"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p23"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P24"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p24"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P25"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p25"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P26"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p26"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P27"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p27"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P28"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p28"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P29"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p29"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P30"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p30"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P31"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p31"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P32"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p32"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P33"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p33"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P34"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p34"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P35"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p35"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P36"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p36"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P37"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p37"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P38"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p38"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P39"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p39"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P40"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p40"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P41"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p41"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P42"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p42"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P43"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p43"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P44"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p44"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P45"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p45"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P46"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p46"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P47"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p47"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P48"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p48"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P49"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p49"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P50"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p50"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P51"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p51"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P52"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p52"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P53"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p53"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P54"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p54"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P55"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p55"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P56"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p56"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P57"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p57"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P58"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p58"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P59"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p59"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P60"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p60"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P61"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p61"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P62"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p62"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P63"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p63"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P64"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p64"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P65"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p65"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P66"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p66"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P67"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p67"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P68"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p68"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P69"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p69"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P70"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p70"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P71"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p71"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P72"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p72"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P73"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p73"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P74"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p74"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P75"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p75"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P76"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p76"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P77"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p77"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P78"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p78"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P79"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p79"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P80"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p80"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P81"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p81"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P82"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p82"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P83"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p83"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P84"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p84"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P85"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p85"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P86"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p86"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P87"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p87"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P88"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p88"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P89"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p89"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P90"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p90"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P91"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p91"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P92"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p92"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P93"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p93"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P94"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p94"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P95"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p95"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P96"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p96"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P97"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p97"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P98"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p98"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubActivity$P99"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p99"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P0"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p0"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P1"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p1"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P2"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p2"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P3"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p3"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P4"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p4"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P5"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p5"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P6"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p6"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P7"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p7"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P8"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p8"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P9"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p9"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P10"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p10"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P11"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p11"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P12"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p12"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P13"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p13"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P14"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p14"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P15"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p15"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P16"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p16"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P17"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p17"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P18"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p18"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P19"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p19"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P20"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p20"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P21"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p21"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P22"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p22"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P23"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p23"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P24"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p24"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P25"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p25"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P26"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p26"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P27"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p27"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P28"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p28"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P29"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p29"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P30"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p30"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P31"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p31"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P32"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p32"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P33"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p33"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P34"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p34"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P35"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p35"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P36"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p36"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P37"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p37"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P38"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p38"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P39"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p39"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P40"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p40"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P41"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p41"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P42"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p42"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P43"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p43"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P44"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p44"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P45"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p45"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P46"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p46"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P47"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p47"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P48"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p48"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P49"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p49"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P50"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p50"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P51"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p51"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P52"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p52"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P53"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p53"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P54"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p54"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P55"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p55"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P56"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p56"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P57"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p57"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P58"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p58"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P59"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p59"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P60"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p60"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P61"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p61"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P62"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p62"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P63"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p63"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P64"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p64"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P65"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p65"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P66"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p66"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P67"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p67"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P68"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p68"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P69"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p69"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P70"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p70"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P71"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p71"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P72"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p72"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P73"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p73"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P74"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p74"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P75"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p75"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P76"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p76"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P77"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p77"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P78"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p78"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P79"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p79"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P80"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p80"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P81"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p81"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P82"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p82"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P83"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p83"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P84"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p84"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P85"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p85"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P86"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p86"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P87"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p87"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P88"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p88"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P89"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p89"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P90"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p90"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P91"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p91"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P92"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p92"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P93"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p93"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P94"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p94"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P95"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p95"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P96"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p96"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P97"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p97"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P98"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p98"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.sk.stub.Stubs$SKStubDialogActivity$P99"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p99"
+            android:taskAffinity="com.sk.svm.virtual.virtual_task"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P0"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p0" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P1"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p1" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P2"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p2" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P3"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p3" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P4"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p4" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P5"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p5" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P6"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p6" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P7"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p7" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P8"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p8" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P9"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p9" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P10"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p10" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P11"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p11" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P12"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p12" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P13"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p13" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P14"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p14" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P15"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p15" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P16"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p16" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P17"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p17" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P18"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p18" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P19"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p19" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P20"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p20" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P21"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p21" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P22"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p22" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P23"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p23" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P24"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p24" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P25"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p25" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P26"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p26" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P27"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p27" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P28"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p28" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P29"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p29" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P30"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p30" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P31"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p31" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P32"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p32" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P33"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p33" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P34"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p34" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P35"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p35" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P36"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p36" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P37"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p37" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P38"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p38" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P39"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p39" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P40"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p40" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P41"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p41" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P42"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p42" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P43"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p43" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P44"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p44" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P45"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p45" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P46"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p46" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P47"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p47" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P48"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p48" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P49"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p49" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P50"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p50" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P51"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p51" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P52"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p52" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P53"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p53" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P54"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p54" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P55"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p55" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P56"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p56" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P57"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p57" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P58"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p58" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P59"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p59" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P60"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p60" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P61"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p61" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P62"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p62" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P63"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p63" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P64"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p64" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P65"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p65" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P66"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p66" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P67"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p67" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P68"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p68" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P69"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p69" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P70"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p70" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P71"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p71" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P72"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p72" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P73"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p73" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P74"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p74" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P75"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p75" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P76"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p76" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P77"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p77" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P78"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p78" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P79"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p79" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P80"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p80" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P81"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p81" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P82"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p82" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P83"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p83" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P84"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p84" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P85"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p85" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P86"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p86" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P87"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p87" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P88"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p88" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P89"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p89" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P90"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p90" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P91"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p91" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P92"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p92" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P93"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p93" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P94"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p94" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P95"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p95" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P96"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p96" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P97"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p97" />
+
+        <service
+            android:name="com.sk.stub.Stubs$SKStubServices$P98"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p98" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P0"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_0"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p0" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P1"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_1"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p1" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P2"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_2"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p2" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P3"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_3"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p3" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P4"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_4"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p4" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P5"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_5"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p5" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P6"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_6"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p6" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P7"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_7"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p7" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P8"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_8"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p8" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P9"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_9"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p9" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P10"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_10"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p10" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P11"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_11"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p11" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P12"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_12"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p12" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P13"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_13"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p13" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P14"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_14"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p14" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P15"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_15"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p15" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P16"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_16"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p16" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P17"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_17"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p17" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P18"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_18"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p18" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P19"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_19"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p19" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P20"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_20"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p20" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P21"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_21"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p21" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P22"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_22"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p22" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P23"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_23"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p23" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P24"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_24"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p24" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P25"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_25"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p25" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P26"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_26"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p26" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P27"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_27"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p27" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P28"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_28"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p28" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P29"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_29"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p29" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P30"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_30"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p30" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P31"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_31"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p31" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P32"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_32"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p32" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P33"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_33"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p33" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P34"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_34"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p34" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P35"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_35"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p35" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P36"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_36"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p36" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P37"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_37"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p37" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P38"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_38"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p38" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P39"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_39"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p39" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P40"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_40"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p40" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P41"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_41"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p41" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P42"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_42"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p42" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P43"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_43"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p43" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P44"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_44"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p44" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P45"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_45"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p45" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P46"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_46"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p46" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P47"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_47"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p47" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P48"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_48"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p48" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P49"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_49"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p49" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P50"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_50"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p50" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P51"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_51"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p51" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P52"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_52"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p52" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P53"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_53"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p53" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P54"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_54"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p54" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P55"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_55"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p55" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P56"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_56"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p56" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P57"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_57"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p57" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P58"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_58"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p58" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P59"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_59"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p59" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P60"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_60"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p60" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P61"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_61"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p61" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P62"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_62"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p62" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P63"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_63"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p63" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P64"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_64"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p64" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P65"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_65"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p65" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P66"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_66"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p66" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P67"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_67"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p67" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P68"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_68"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p68" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P69"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_69"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p69" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P70"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_70"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p70" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P71"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_71"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p71" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P72"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_72"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p72" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P73"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_73"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p73" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P74"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_74"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p74" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P75"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_75"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p75" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P76"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_76"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p76" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P77"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_77"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p77" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P78"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_78"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p78" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P79"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_79"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p79" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P80"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_80"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p80" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P81"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_81"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p81" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P82"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_82"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p82" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P83"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_83"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p83" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P84"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_84"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p84" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P85"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_85"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p85" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P86"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_86"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p86" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P87"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_87"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p87" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P88"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_88"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p88" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P89"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_89"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p89" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P90"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_90"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p90" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P91"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_91"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p91" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P92"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_92"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p92" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P93"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_93"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p93" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P94"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_94"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p94" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P95"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_95"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p95" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P96"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_96"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p96" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P97"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_97"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p97" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P98"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_98"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p98" />
+
+        <provider
+            android:name="com.sk.stub.Stubs$SKStubProvider$P99"
+            android:authorities="${AUTHORITY_PREFIX}.virtual_stub_99"
+            android:exported="true"
+            android:permission="${PERMISSION_PREFIX}.permission.SAFE_ACCESS"
+            android:process=":p99" />
+
+
+        <provider
+            android:name="com.sk.stub.ProviderGenProxy"
+            android:authorities="${AUTHORITY_PREFIX}.provider_proxy"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:process=":x" />
+
+        <activity
+            android:name="com.sk.stub.ExtraActivity$WindowPreviewActivity"
+            android:excludeFromRecents="true"
+            android:process=":x"
+            android:taskAffinity="com.sk.svm.virtual.window_preview"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.sk.stub.StubApplicationMisc$RequestPermissionsActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:process=":x"
+            android:taskAffinity="com.sk.svm.virtual.request_permission"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+    </application>
+</manifest>

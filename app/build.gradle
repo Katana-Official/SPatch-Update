@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+apply plugin: 'idea'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.sk.spatch"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 39
+        versionName "10.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi-v7a', 'x86'//, 'x86_64','arm64-v8a','mips','mips64'
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_12
+            targetCompatibility JavaVersion.VERSION_12
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+
+    dexOptions {
+        jumboMode = true
+
+        javaMaxHeapSize "2g"
+
+        additionalParameters = [//dex参数详见 dx --help
+                                '--multi-dex',//多分包
+                                '--set-max-idx-number=60000',//每个包内方法数上限
+                                '--main-dex-list='+projectDir+'/multiDexKeep.txt',//打包进主classes.dex的文件列表
+                                '--minimal-main-dex'//使上一句生效
+        ]
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':lib')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //Promise Support
+    implementation 'org.jdeferred:jdeferred-android-aar:1.2.4'
+    // 滑动动画
+    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+    // 点赞动画
+    implementation 'com.github.kaisengao:KsgLikeView:1.0.1'
+    // 红点
+    implementation 'cn.yc:YCRedDotViewLib:1.0.3'
+    // 沙漏动画
+    implementation 'com.yzy:HourglassView:1.0.0'
+    // asm
+    api 'org.ow2.asm:asm-debug-all:5.0.3'
+    api "org.antlr:antlr:3.5.2"
+    api group: 'org.antlr', name: 'antlr4-runtime', version: '4.7.2'
+
+    api 'com.google.guava:guava:24.1-jre'
+    api 'com.google.code.findbugs:jsr305:3.0.2'
+    api 'junit:junit:4.12'
+    api 'org.mockito:mockito-core:1.10.19'
+    api 'org.antlr:antlr-runtime:3.5.2'
+    api 'org.antlr:antlr:3.5.2'
+    api 'org.antlr:stringtemplate:3.2.1'
+    api 'org.xbib.gradle.plugin:gradle-plugin-jflex:1.1.0'
+    api 'net.sf.proguard:proguard-gradle:6.0.3'
+    // api 'com.google.android.tools:dx:1.7'
+    api 'com.google.code.gson:gson:2.8.5'
+    api 'com.beust:jcommander:1.64'
+
+    api 'org.smali:dexlib2:2.0.6'
+
+    //mta 3.4.7 稳定版
+    api 'com.qq.mta:mta:3.4.7-Release'
+    api 'com.tencent.mid:mid:4.06-Release'
+
+    // once
+    implementation 'com.jonathanfinerty.once:once:1.0.3'
+
+    // zip4j
+    implementation group: 'net.lingala.zip4j', name: 'zip4j', version: '2.1.2'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "com.android.support:multidex:1.0.3"
+    api files('libs/*')
+}
+

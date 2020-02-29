@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="virtual_installer">VirtualPackage Installer</string>
+    <string name="owner_name">机主</string>
+    <string name="choose">选择</string>
+    <string name="noApplications">找不到可用应用程序</string>
+    <string name="add_account_button_label">添加账号</string>
+    <string name="keep_service_noti_title">移除服务通知</string>
+    <string name="keep_service_noti_text">移除服务通知</string>
+    <string name="keep_service_damon_noti_title_v24">后台运行中</string>
+    <string name="keep_service_damon_noti_text_v24">保持应用后台运行，能够及时接收消息</string>
+    <string name="keep_service_damon_noti_title">提示: 消息应该是隐藏的</string>
+    <string name="keep_service_damon_noti_text">消失</string>
+</resources>

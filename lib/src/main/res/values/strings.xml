@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="engine_process_name" translatable="false">:x</string>
+    <string name="virtual_installer">VirtualPackage Installer</string>
+    <string name="owner_name">Admin</string>
+    <string name="choose">Choose</string>
+    <string name="noApplications">No find applications</string>
+    <string name="add_account_button_label">Add account</string>
+    <string name="keep_service_noti_title">Remove Service Notification</string>
+    <string name="keep_service_noti_text">Remove Service Notification</string>
+    <string name="keep_service_damon_noti_title_v24">Running...</string>
+    <string name="keep_service_damon_noti_text_v24">Keep app alive to receive new messages on time</string>
+    <string name="keep_service_damon_noti_title">Tip: Message Should Be Hidden</string>
+    <string name="keep_service_damon_noti_text">Get Removed</string>
+</resources>

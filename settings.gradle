@@ -1,0 +1,1 @@
+include ':app', ':score', ':skmain', ':lib', ':lib2', ':stubmanifest', ':xpcompat'
