@@ -1,6 +1,6 @@
-# Metaverse Enging Launcher UI
+# Metaverse Engine Launcher UI
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Katana-Official/SPatch-Update">Metaverse Enging Launcher UI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/OfficialKatana">Katana</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Katana-Official/SPatch-Update">Metaverse Engine Launcher UI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/OfficialKatana">Katana</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
 
 ## Commercial Indication
 You can use this project freely, and we'd recommend you to contact us for further sdk support.  
@@ -14,14 +14,14 @@ You can use this project freely, and we'd recommend you to contact us for furthe
 
 SlimVXposed is the most efficient app for app twin and app clone, you can see our app on our main site.  
 Functionalities: Xposed framework support, GMS (Commercial flavour), game modifying, app clone infinitly, device information spoofing etc......  
-SlimVXposed is an powerful Android container, which can open more apps. This project provides a simple UI for you to experience. You can also download the official apk from [Official Web](https://www.die.lu).  
+SlimVXposed is a powerful Android container, which can open more apps. This project provides a simple UI for you to experience. You can also download the official apk from [Official Web](https://www.die.lu).  
 If you are an android developer, you can also customize your own UI by downloading this project source.  
 You don't need to pay attention to the technical details that are difficult to understand.  
 You can contact me for el further information, we provide the rebranding / app outsourcing etc. services.
 
 [SPatch](http://spatch.die.lu)
 
-Power Android / iOS app modifying tool, you can make your plugins and app more integrated.
+Powerful Android / iOS app modifying tool, you can make your plugins and app more integrated.
 
 ## Contact Details
 Email: 1@die.lu  
