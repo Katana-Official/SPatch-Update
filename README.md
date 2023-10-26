@@ -43,8 +43,9 @@ Telegram: [https://t.me/foxiteu](https://t.me/foxiteu)
     FozaActivityManager.get().launchApp(
         applicationPackageName
     );
-```  
-or ```Java
+```
+or  
+```Java
     FozaActivityManager.get().launchApp(
 	    userPartitionName,
         applicationPackageName
