@@ -54,4 +54,15 @@ or
 
 ### Change logs
 #### Oct. 2023
-Initial upload mi project.
+Initial upload mi project.  
+
+### Credits
+[SHook](https://gitee.com/quitoa/slim-xposed-compat)
+[LSPlant](https://github.com/LSPosed/LSPlant)
+[AnyFile2Byte](https://github.com/OfficialKatana/AnyFile2Byte)
+[GraphScope](https://github.com/alibaba/GraphScope)
+[Il2CppDumper](https://github.com/Perfare/Il2CppDumper)
+[ShadowHook](https://github.com/bytedance/android-inline-hook)
+[dexmaker](https://github.com/linkedin/dexmaker)
+[ByteHook](https://github.com/bytedance/bhook)
+
