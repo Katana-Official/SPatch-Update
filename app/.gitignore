@@ -1,0 +1,5 @@
+/build
+/release
+*.apk
+/libs/foza-release.aar
+/debug/

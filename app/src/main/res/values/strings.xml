@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2008 The Android Open Source Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <skip />
+    <!-- Application name -->
+    <string name="application_name">Meta Launcher</string>
+    <!-- Accessibility-facing application name -->
+    <string name="home">Home</string>
+    <!-- Name for all applications running as this uid. -->
+    <string name="uid_name">Android Core Apps</string>
+    <!-- Default folder name -->
+    <!-- Title of dialog that appears after user selects Wallpaper from menu -->
+    <string name="chooser_wallpaper">Choose wallpaper from</string>
+    <!-- Button label on Wallpaper Gallery screen; user selects this button to set a specific wallpaper -->
+    <string name="wallpaper_instructions">Set wallpaper</string>
+    <!-- Option in "Select wallpaper from" dialog box -->
+    <string name="pick_wallpaper">Wallpapers</string>
+    <!-- Displayed when user selects a shortcut for an app that was uninstalled [CHAR_LIMIT=none]-->
+    <string name="activity_not_found">App isn\'t installed.</string>
+    <!--  Labels for the tabs in the customize drawer -->
+    <string name="widgets_tab_label">Widgets</string>
+
+    <!-- AppsCustomize pane -->
+    <!-- Message to tell the user to press and hold on a widget to add it [CHAR_LIMIT=50] -->
+    <string name="long_press_widget_to_add">Touch &amp; hold to pick up a widget.</string>
+    <!-- Market button text.  The market button text is removed in Launcher.java 
+         in the Phone UI. [CHAR LIMIT=32] -->
+    <string name="market">Shop</string>
+    <!-- The format string for the dimensions of a widget in the drawer -->
+    <!-- There is a special version of this format string for Farsi -->
+    <string name="widget_dims_format">%1$d \u00d7 %2$d</string>
+
+    <!-- External-drop widget pick label format string [CHAR_LIMIT=25] -->
+    <string name="external_drop_widget_pick_format" translatable="false">%1$s (%2$d \u00d7 %3$d)</string>
+    <!-- External-drop widget error string.  This is the error that is shown
+         when you drag and item into the homescreen and it is unable to fit,
+         or an error is encountered. [CHAR_LIMIT=50] -->
+    <string name="external_drop_widget_error">Couldn\'t drop item on this Home screen.</string>
+    <!-- External-drop widget pick title.  This is shown as the title of the
+         dialog which allows you to pick which widgets to handle a particular
+         drop if there are multiple choices. [CHAR_LIMIT=35] -->
+    <string name="external_drop_widget_pick_title">Choose widget to create</string>
+
+    <!-- Folders -->
+    <skip />
+    <!-- Label of Folder name field in Rename folder dialog box -->
+    <string name="rename_folder_label">Folder name</string>
+    <!-- Title of dialog box -->
+    <string name="rename_folder_title">Rename folder</string>
+    <!-- Buttons in Rename folder dialog box -->
+    <string name="rename_action">OK</string>
+    <!-- Buttons in Rename folder dialog box -->
+    <string name="cancel_action">Cancel</string>
+
+    <!-- Shortcuts -->
+    <skip />
+    <!-- Title of dialog box -->
+    <string name="menu_item_add_item">Add to Home screen</string>
+    <!-- Options in "Add to Home" dialog box; Title of the group containing the list of all apps -->
+    <string name="group_applications">Apps</string>
+    <!-- Options in "Add to Home" dialog box; Title of the group containing the list of all shortcut
+s -->
+    <string name="group_shortcuts">Shortcuts</string>
+    <!-- Options in "Add to Home" dialog box; Title of the group containing the list of all widgets/gadgets -->
+    <string name="group_widgets">Widgets</string>
+    <!-- Options in "Add to Home" dialog box; Title of the group containing the list of apps that can set the wallpaper-->
+    <string name="group_wallpapers">Wallpapers</string>
+    <!-- Error message when user has filled all their home screens -->
+    <string name="completely_out_of_space">No more room on your Home screens.</string>
+    <!-- Error message when user has filled a home screen -->
+    <string name="out_of_space">No more room on this Home screen.</string>
+    <!-- Error message when user has filled the hotseat -->
+    <string name="hotseat_out_of_space">No more room on the hotseat.</string>
+    <!-- Error message when user tries to drop an invalid item on the hotseat -->
+    <string name="invalid_hotseat_item">This widget is too large for the hotseat.</string>
+    <!-- Message displayed when a shortcut is created by an external application -->
+    <string name="shortcut_installed">Shortcut \"<xliff:g id="name" example="Browser">%s</xliff:g>\" created.</string>
+    <!-- Message displayed when a shortcut is uninstalled by an external application -->
+    <string name="shortcut_uninstalled">Shortcut \"<xliff:g id="name" example="Browser">%s</xliff:g>\" was removed.</string>
+    <!-- Message displayed when an external application attemps to create a shortcut that already exists -->
+    <string name="shortcut_duplicate">Shortcut \"<xliff:g id="name" example="Browser">%s</xliff:g>\" already exists.</string>
+
+    <!-- Title of dialog when user is selecting shortcut to add to homescreen -->
+    <string name="title_select_shortcut">Choose shortcut</string>
+    <!-- Title of dialog when user is selecting an application to add to homescreen -->
+    <string name="title_select_application">Choose app</string>
+
+    <!-- All applications label -->
+    <string name="all_apps_button_label">Apps</string>
+    <!-- Label for button in all applications label to go back home (to the workspace / desktop)
+         for accessibilty (spoken when the button gets focus). -->
+    <string name="all_apps_home_button_label">Home</string>
+    <!-- Label for trash icon on workspace. Meant to communicate the idea of removing the
+         icon/widget from the home screen, but not permanently. [CHAR_LIMIT=30] -->
+    <string name="delete_zone_label_workspace">Remove</string>
+    <!-- Label for trash icon in All Apps. The icon/widget will become completely unavailable on the
+         device. [CHAR_LIMIT=30]-->
+    <string name="delete_zone_label_all_apps">Uninstall</string>
+
+    <!-- Label for delete drop target. [CHAR_LIMIT=30] -->
+    <string name="delete_target_label">Remove</string>
+    <!-- Label for uninstall drop target. [CHAR_LIMIT=30]-->
+    <string name="delete_target_uninstall_label">Uninstall</string>
+    <!-- Label for the info icon. [CHAR_LIMIT=30] -->
+    <string name="info_target_label">App info</string>
+
+    <!-- Accessibility: Search button -->
+    <string name="accessibility_search_button">Search</string>
+    <!-- Accessibility: Voice Search button -->
+    <string name="accessibility_voice_search_button">Voice Search</string>
+    <!-- Accessibility: AllApps button -->
+    <string name="accessibility_all_apps_button">Apps</string>
+    <!-- Accessibility: Delete button -->
+    <string name="accessibility_delete_button">Remove</string>
+
+    <!-- Label for trash icon in All Apps, when an updated system app is selected. The update will
+         be uninstalled. [CHAR_LIMIT=30] -->
+    <string name="delete_zone_label_all_apps_system_app">Uninstall update</string>
+
+    <!-- Menus items: -->
+    <skip />
+    <!-- Verb, menu item used to add an item on the desktop -->
+    <string name="menu_add">Add</string>
+    <!-- Menu item used to manage installed applications -->
+    <string name="menu_manage_apps">Manage apps</string>
+    <!-- Noun, menu item used to set the desktop's wallpaper -->
+    <string name="menu_wallpaper">Wallpaper</string>
+    <!-- Verb, menu item used to initiate global search -->
+    <string name="menu_search">Search</string>
+    <!-- Noun, menu item used to bring down the notifications shade -->
+    <string name="menu_notifications">Notifications</string>
+    <!-- Noun, menu item used to show the system settings -->
+    <string name="menu_settings">System settings</string>
+    <!-- Noun, menu item used to show help. [CHAR_LIMIT=none] -->
+    <string name="menu_help">Help</string>
+
+    <!-- URL pointing to help text. If empty, no link to help will be created [DO NOT TRANSLATE] -->
+    <string name="help_url" translatable="false"></string>
+
+    <!--  Strings for the contextual action bar (CAB) in All Apps -->
+    <skip />
+    <!-- Describes the button for uninstalling the currently selected application.
+         Text is not displayed, but provided for accessibility. [CHAR_LIMIT=none] -->
+    <string name="cab_menu_delete_app">Uninstall app</string>
+    <!-- Describes the button for getting details/info about currently selected application.
+         Text is not displayed, but provided for accessibility. [CHAR_LIMIT=none] -->
+    <string name="cab_menu_app_info">App details</string>
+    <!-- Appears in the CAB when an app is selected in All Apps or Customize mode. [CHAR_LIMIT=50] -->
+    <string name="cab_app_selection_text">1 app selected</string>
+    <!-- Appears in the CAB when a widget is selected in Customize mode. [CHAR_LIMIT=50] -->
+    <string name="cab_widget_selection_text">1 widget selected</string>
+    <!-- Appears in the CAB when a folder is selected in Customize mode. [CHAR_LIMIT=50] -->
+    <string name="cab_folder_selection_text">1 folder selected</string>
+    <!-- Appears in the CAB when a shortcut is selected in Customize mode. [CHAR_LIMIT=50] -->
+    <string name="cab_shortcut_selection_text">1 shortcut selected</string>
+
+    <!-- Permissions: -->
+    <skip />
+    <!-- Permission short label -->
+    <string name="permlab_install_shortcut">install shortcuts</string>
+    <!-- Permission description -->
+    <string name="permdesc_install_shortcut">Allows an app to add
+        shortcuts without user intervention.</string>
+    <!-- Permission short label -->
+    <string name="permlab_uninstall_shortcut">uninstall shortcuts</string>
+    <!-- Permission description -->
+    <string name="permdesc_uninstall_shortcut">Allows the app to remove
+        shortcuts without user intervention.</string>
+    <!-- Permission short label -->
+    <string name="permlab_read_settings">read Home settings and shortcuts</string>
+    <!-- Permission description -->
+    <string name="permdesc_read_settings">Allows the app to read the settings and
+        shortcuts in Home.</string>
+    <!-- Permission short label -->
+    <string name="permlab_write_settings">write Home settings and shortcuts</string>
+    <!-- Permission description -->
+    <string name="permdesc_write_settings">Allows the app to change the settings and
+        shortcuts in Home.</string>
+
+    <!-- Widgets: -->
+    <skip />    
+
+    <!-- Text to show user in place of a gadget when we can't display it properly -->
+    <string name="gadget_error_text">Problem loading widget</string>
+
+    <!-- Text to inform the user that they can't uninstall a system application -->
+    <string name="uninstall_system_app_text">This is a system app and can\'t be uninstalled.</string>
+
+    <!-- Title of the Android Dreams (screensaver) module -->
+    <string name="dream_name">Rocket Launcher</string>
+
+    <!-- Default folder title -->
+    <string name="folder_hint_text">Unnamed Folder</string>
+
+    <!-- Accessibility -->
+    <skip />
+
+    <!-- The format string for Workspace descriptions [CHAR_LIMIT=none] -->
+    <string name="workspace_description_format">Home screen %1$d</string>
+
+    <!-- The format string for default page scroll text [CHAR_LIMIT=none] -->
+    <string name="default_scroll_format">Page %1$d of %2$d</string>
+    <!-- The format string for Workspace page scroll text [CHAR_LIMIT=none] -->
+    <string name="workspace_scroll_format">Home screen %1$d of %2$d</string>
+    <!-- The format string for AppsCustomize Apps page scroll text [CHAR_LIMIT=none] -->
+    <string name="apps_customize_apps_scroll_format">Apps page %1$d of %2$d</string>
+    <!-- The format string for AppsCustomize Apps page scroll text [CHAR_LIMIT=none] -->
+    <string name="apps_customize_widgets_scroll_format">Widgets page %1$d of %2$d</string>
+
+    <!-- Clings -->
+    <!-- The title text for the workspace cling [CHAR_LIMIT=none] -->
+    <string name="workspace_cling_title">Make yourself at home</string>
+    <!-- The description of how to use the workspace [CHAR_LIMIT=none] -->
+    <string name="workspace_cling_move_item">You can put your favorite apps here.</string>
+    <!-- The description of how to open all apps from the workspace [CHAR_LIMIT=none] -->
+    <string name="workspace_cling_open_all_apps">To see all your apps, touch the circle.</string>
+    <!-- The title text for the All Apps cling [CHAR_LIMIT=none] -->
+    <string name="all_apps_cling_title">Choose some apps</string>
+    <!-- The description of how to pick up and add an item to the workspace [CHAR_LIMIT=none] -->
+    <string name="all_apps_cling_add_item">To add an app to your Home screen, touch &amp; hold it.</string>
+    <!-- The title text for the Folder cling [CHAR_LIMIT=none] -->
+    <string name="folder_cling_title">Organize your apps with folders</string>
+    <!-- The description of how to move an app [CHAR_LIMIT=none] -->
+    <string name="folder_cling_move_item">To move an app, touch &amp; hold it.</string>
+    <!-- The description of how to create a folder [CHAR_LIMIT=none] -->
+    <string name="folder_cling_create_folder">To make a new folder on your Home screen, stack one app on top of another.</string>
+    <!-- The text on the button to dismiss a cling [CHAR_LIMIT=none] -->
+    <string name="cling_dismiss">OK</string>
+    <!-- Error message on dummy custom cling layout [DO NOT TRANSLATE] -->
+    <!--<add-resource type="string" name="default_folder_name" />-->
+
+    <!-- Folder accessibility -->
+    <!-- The format string for when a folder is opened, speaks the dimensions -->
+    <string name="folder_opened">Folder opened, <xliff:g id="width" example="5">%1$d</xliff:g> by <xliff:g id="height" example="3">%2$d</xliff:g></string>
+    <!-- Instruction that clicking outside will close folder -->
+    <string name="folder_tap_to_close">Touch to close folder</string>
+    <!-- Instruction that clicking outside will commit folder rename -->
+    <string name="folder_tap_to_rename">Touch to save rename</string>
+    <!-- Indication that folder closed -->
+    <string name="folder_closed">Folder closed</string>
+    <!-- Folder renamed format -->
+    <string name="folder_renamed">Folder renamed to <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+    <!-- Folder name format -->
+    <string name="folder_name_format">Folder: <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+
+    <!-- Strings used in device overlays -->
+
+    <!-- Clings -->
+    <!-- Dummy string [CHAR_LIMIT=40] -->
+    <!-- Dummy string [CHAR_LIMIT=60] -->
+    <!-- Dummy string [CHAR_LIMIT=40] -->
+    <!-- Dummy string [CHAR_LIMIT=60] -->
+
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <original-package android:name="com.android.launcher2" />
+
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.PRELOAD_WORKSPACE"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="signature" />-->
+    <!--android:protectionLevel="system|signature" />-->
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.INSTALL_SHORTCUT"-->
+<!--        android:description="@string/permdesc_install_shortcut"-->
+<!--        android:label="@string/permlab_install_shortcut"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="dangerous" />-->
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"-->
+<!--        android:description="@string/permdesc_uninstall_shortcut"-->
+<!--        android:label="@string/permlab_uninstall_shortcut"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="dangerous" />-->
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.READ_SETTINGS"-->
+<!--        android:description="@string/permdesc_read_settings"-->
+<!--        android:label="@string/permlab_read_settings"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="normal" />-->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name="com.android.launcher2.LauncherApplication"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_home"
+        android:label="@string/application_name"
+        android:supportsRtl="true">
+        <activity
+            android:name="com.android.launcher2.Launcher"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="nosensor"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.android.launcher2.WallpaperChooser"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@mipmap/ic_launcher_wallpaper"
+            android:label="@string/pick_wallpaper"
+            android:process=":wallpaper_chooser"
+            android:theme="@style/Theme.WallpaperPicker"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.wallpaper.preview"
+                android:resource="@xml/wallpaper_picker_preview" />
+        </activity>
+
+        <!-- Intent received used to prepopulate the default workspace. -->
+        <receiver
+            android:name="com.android.launcher2.PreloadReceiver"
+            android:permission="com.android.launcher.permission.PRELOAD_WORKSPACE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.PRELOAD_WORKSPACE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Intent received used to install shortcuts from other applications -->
+        <receiver
+            android:name="com.android.launcher2.InstallShortcutReceiver"
+            android:permission="com.android.launcher.permission.INSTALL_SHORTCUT"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Intent received used to uninstall shortcuts from other applications -->
+        <receiver
+            android:name="com.android.launcher2.UninstallShortcutReceiver"
+            android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- New user initialization; set up initial wallpaper -->
+        <receiver
+            android:name="com.android.launcher2.UserInitializeReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_INITIALIZE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.android.launcher2.PackageChangedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_CHANGED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package"></data>
+            </intent-filter>
+        </receiver>
+
+        <!-- The settings provider contains Home's data, like the workspace favorites -->
+        <provider
+            android:name="com.android.launcher2.LauncherProvider"
+            android:authorities="com.android.launcher2.settings"
+            android:exported="true"
+            android:readPermission="com.android.launcher.permission.READ_SETTINGS"
+            android:writePermission="com.android.launcher.permission.WRITE_SETTINGS" />
+
+        <meta-data
+            android:name="android.nfc.disable_beam_default"
+            android:value="true" />
+    </application>
+</manifest>

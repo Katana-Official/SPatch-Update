@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<com.android.launcher2.AppsCustomizeTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    android:background="#FF000000">
+
+    <LinearLayout
+        android:id="@+id/apps_customize_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <!-- The layout_width of the tab bar gets overriden to align the content
+             with the text in the tabs in AppsCustomizeTabHost. -->
+        <FrameLayout
+            android:id="@+id/tabs_container"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/apps_customize_tab_bar_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/apps_customize_tab_bar_margin_top">
+
+            <com.android.launcher2.FocusOnlyTabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/tab_unselected_holo"
+                android:divider="@null"
+                android:gravity="start"
+                android:tabStripEnabled="false" />
+
+            <include
+                android:id="@+id/market_button"
+                layout="@layout/market_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.android.launcher2.AppsCustomizePagedView
+                android:id="@+id/apps_customize_pane_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                launcher:clingFocusedX="@integer/apps_customize_cling_focused_x"
+                launcher:clingFocusedY="@integer/apps_customize_cling_focused_y"
+                launcher:maxAppCellCountX="@integer/apps_customize_maxCellCountX"
+                launcher:maxAppCellCountY="@integer/apps_customize_maxCellCountY"
+                launcher:maxGap="@dimen/workspace_max_gap"
+                launcher:pageLayoutHeightGap="@dimen/apps_customize_pageLayoutHeightGap"
+                launcher:pageLayoutPaddingBottom="@dimen/apps_customize_pageLayoutPaddingBottom"
+                launcher:pageLayoutPaddingLeft="@dimen/apps_customize_pageLayoutPaddingLeft"
+                launcher:pageLayoutPaddingRight="@dimen/apps_customize_pageLayoutPaddingRight"
+                launcher:pageLayoutPaddingTop="@dimen/apps_customize_pageLayoutPaddingTop"
+                launcher:pageLayoutWidthGap="@dimen/apps_customize_pageLayoutWidthGap"
+                launcher:widgetCellHeightGap="@dimen/apps_customize_widget_cell_height_gap"
+                launcher:widgetCellWidthGap="@dimen/apps_customize_widget_cell_width_gap"
+                launcher:widgetCountX="@integer/apps_customize_widget_cell_count_x"
+                launcher:widgetCountY="@integer/apps_customize_widget_cell_count_y" />
+
+            <FrameLayout
+                android:id="@+id/animation_buffer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FF000000"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/paged_view_indicator"
+                layout="@layout/scroll_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/all_apps_cling"
+        layout="@layout/all_apps_cling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</com.android.launcher2.AppsCustomizeTabHost>
