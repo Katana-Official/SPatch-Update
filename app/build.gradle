@@ -25,15 +25,6 @@ android {
             }
         }
     }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-            res.srcDirs = [
-                    'src/main/res2',
-                    'src/main/res'
-            ]
-        }
-    }
     buildTypes {
         debug {
             debuggable false
@@ -62,11 +53,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-        freeCompilerArgs = [
-                '-Xno-param-assertions',
-                '-Xno-call-assertions',
-                '-Xno-receiver-assertions'
-        ]
     }
     namespace 'com.android.launcher'
 }
