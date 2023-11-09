@@ -31,8 +31,6 @@ import com.android.launcher.R;
 
 import java.lang.ref.WeakReference;
 
-import lu.die.foza.SuperAPI.FozaCore;
-
 public class LauncherApplication extends Application {
     private LauncherModel mModel;
     private IconCache mIconCache;
@@ -84,12 +82,6 @@ public class LauncherApplication extends Application {
         ContentResolver resolver = getContentResolver();
         resolver.registerContentObserver(LauncherSettings.Favorites.CONTENT_URI, true,
                 mFavoritesObserver);
-    }
-
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        FozaCore.startup(base);
     }
 
     /**
