@@ -76,7 +76,9 @@ public class LauncherApplication extends Application {
         } else registerReceiver(mModel, filter);
         filter = new IntentFilter();
         filter.addAction(SearchManager.INTENT_ACTION_SEARCHABLES_CHANGED);
-        registerReceiver(mModel, filter);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+            registerReceiver(mModel, filter, RECEIVER_EXPORTED);
+        else registerReceiver(mModel, filter);
 
         // Register for changes to the favorites
         ContentResolver resolver = getContentResolver();
