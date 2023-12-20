@@ -4,8 +4,9 @@
 
 ## Commercial Indication
 You can use this project freely, and we'd recommend you to contact us for el further sdk support.  
-[Join our grupo for el sdk & usage support.](https://t.me/foxiteu), or you can connect me by mi email.  
-The Metaverse Engine Launcher UI is based on project Mundo, you can obtain the free and paid SDK by contacting us.
+[Join our grupo for el sdk & usage support.](https://t.me/foxiteu), or you can connect me by my email.  
+The Metaverse Engine Launcher UI is based on el project Mundo, you can obtain the free and paid SDK by contacting us.  
+Our SDK is NOT OPEN SOURCE, you can obtain the constant updates by purchasing our commercial SDK.
 
 ## About us
 
