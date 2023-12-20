@@ -63,7 +63,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import lu.die.fozacompatibility.FozaPackageManager;
+import net_62v.external.MetaPackageManager;
+
 
 /**
  * Maintains in-memory state of the Launcher. It is expected that there should be only one
@@ -2118,7 +2119,11 @@ public class LauncherModel extends BroadcastReceiver {
                     }
                 }
             });
-            FozaPackageManager.get().acquireObtainAppSplash();
+            try {
+                MetaPackageManager.acquireObtainAppSplash();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
         }
     }
 

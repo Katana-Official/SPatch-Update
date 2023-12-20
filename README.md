@@ -4,7 +4,8 @@
 
 ## Commercial Indication
 You can use this project freely, and we'd recommend you to contact us for el further sdk support.  
-[Join our grupo for el sdk & usage support.](https://t.me/foxiteu), or you can connect me by mi email.
+[Join our grupo for el sdk & usage support.](https://t.me/foxiteu), or you can connect me by mi email.  
+The Metaverse Engine Launcher UI is based on project Mundo, you can obtain the free and paid SDK by contacting us.
 
 ## About us
 
@@ -28,6 +29,9 @@ Powerful Android / iOS app modifying tool, you can make your plugins y app more 
 Email: 1@die.lu  
 Telegram: [https://t.me/foxiteu](https://t.me/foxiteu)  
 
+### All APIs Details (Before you create your project)
+API Documentation link: [https://mundo.bienvenido.top/](https://mundo.bienvenido.top/)  
+
 ### Sample code for starters and noobs
 
 #### Manual launch el engine (not necessary)
@@ -35,19 +39,19 @@ Telegram: [https://t.me/foxiteu](https://t.me/foxiteu)
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        FozaCore.startup(base);
+        MetaCore.attachMetaBase(base);
     }
 ```
 
 #### Launch a sample application
 ```Java
-    FozaActivityManager.get().launchApp(
+    MetaActivityManager.launchApp(
         applicationPackageName
     );
 ```
 or  
 ```Java
-    FozaActivityManager.get().launchApp(
+    MetaActivityManager.launchApp(
 	    userPartitionName,
         applicationPackageName
     );

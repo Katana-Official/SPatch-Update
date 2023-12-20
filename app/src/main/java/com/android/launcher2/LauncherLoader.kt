@@ -1,8 +1,8 @@
 package com.android.launcher2
 
 import android.content.Intent
-import lu.die.foza.SuperAPI.FozaCore
-import lu.die.fozacompatibility.FozaPackageManager
+import net_62v.external.MetaCore
+import net_62v.external.MetaPackageManager
 
 object LauncherLoader {
     // For java
@@ -10,12 +10,12 @@ object LauncherLoader {
     fun instance() = this
     fun waitForAndGetInitialService(
         serviceCallback : () -> Unit
-    ) = FozaCore.registerCoreCallback(
+    ) = MetaCore.registerCoreCallback(
         serviceCallback
     )
     fun obtainLaunchIntentByPackage(
         src : String
-    ) = FozaPackageManager.get().getLaunchIntentForPackage(
+    ) = MetaPackageManager.getLaunchIntentForPackage(
         Intent(Intent.ACTION_MAIN).setPackage(src) /* Package Name */
     )
 }

@@ -7,8 +7,8 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.3'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20'
+        classpath 'com.android.tools.build:gradle:8.2.0'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0-Beta2'
         // classpath 'com.android.tools.build:gradle-experimental:3.3.2'
         // classpath 'com.trend.lazyinject:aopweave:3.4.0-beta'
         // NOTE: Do not place your application dependencies here; they belong

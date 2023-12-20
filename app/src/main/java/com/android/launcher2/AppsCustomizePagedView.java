@@ -59,7 +59,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import lu.die.fozacompatibility.FozaActivityManager;
+import net_62v.external.MetaActivityManager;
 
 /**
  * A simple callback interface which also provides the results of the task.
@@ -525,7 +525,7 @@ public class AppsCustomizePagedView extends PagedViewWithDraggableItems implemen
                 mLauncher.startActivitySafely(v, appInfo.intent, appInfo);
             }
             else try{
-                Intent reserver = FozaActivityManager.get().obtainSplashLaunchIntent(
+                Intent reserver = MetaActivityManager.obtainSplashLaunchIntent(
                         0,
                         appInfo.componentName.getPackageName(),
                         mLauncher

@@ -26,6 +26,7 @@ import android.content.res.Resources;
 import android.graphics.PointF;
 import android.graphics.Rect;
 import android.graphics.drawable.TransitionDrawable;
+import android.os.RemoteException;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewConfiguration;
@@ -220,7 +221,11 @@ public class DeleteDropTarget extends ButtonDropTarget {
 
         if (isAllAppsApplication(d.dragSource, item)) {
             // Uninstall the application if it is being dragged from AppsCustomize
-            mLauncher.startApplicationUninstallActivity((ApplicationInfo) item);
+            try {
+                mLauncher.startApplicationUninstallActivity((ApplicationInfo) item);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
         } else if (isWorkspaceOrFolderApplication(d)) {
             LauncherModel.deleteItemFromDatabase(mLauncher, item);
         } else if (isWorkspaceFolder(d)) {

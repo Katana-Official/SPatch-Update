@@ -61,6 +61,7 @@ import android.os.Debug;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.os.RemoteException;
 import android.os.StrictMode;
 import android.os.SystemClock;
 import android.os.UserManager;
@@ -114,9 +115,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import lu.die.foza.SuperAPI.FozaCore;
-import lu.die.fozacompatibility.FozaActivityManager;
-import lu.die.fozacompatibility.FozaPackageManager;
+import net_62v.external.MetaActivityManager;
+import net_62v.external.MetaPackageManager;
 
 /**
  * Default launcher application.
@@ -434,7 +434,11 @@ public final class Launcher extends Activity
         // On large interfaces, we want the screen to auto-rotate based on the current orientation
         unlockScreenOrientation(true);
         LauncherLoader.instance().waitForAndGetInitialService(() -> {
-            FozaPackageManager.get().acquireObtainAppSplash();
+            try {
+                MetaPackageManager.acquireObtainAppSplash();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             return null;
         });
     }
@@ -2022,7 +2026,7 @@ public final class Launcher extends Activity
             else
             {
                 try{
-                    Intent reserveIntent = FozaActivityManager.get().obtainSplashLaunchIntent(
+                    Intent reserveIntent = MetaActivityManager.obtainSplashLaunchIntent(
                             0,
                             ((ShortcutInfo) tag).intent.getComponent().getPackageName(),
                             this
@@ -2125,10 +2129,10 @@ public final class Launcher extends Activity
         startActivitySafely(null, intent, "startApplicationDetailsActivity");
     }
 
-    void startApplicationUninstallActivity(ApplicationInfo appInfo) {
-        if(FozaPackageManager.get().isInnerAppInstalled(appInfo.componentName.getPackageName()))
+    void startApplicationUninstallActivity(ApplicationInfo appInfo) throws RemoteException {
+        if(MetaPackageManager.isInnerAppInstalled(appInfo.componentName.getPackageName()))
         {
-            FozaPackageManager.get().uninstallAppFully(appInfo.componentName.getPackageName());
+            MetaPackageManager.uninstallAppFully(appInfo.componentName.getPackageName());
             int messageId = R.string.cling_dismiss;
             Toast.makeText(this, messageId, Toast.LENGTH_SHORT).show();
             return;
