@@ -35,15 +35,6 @@ API Documentation link: [https://mundo.bienvenido.top/](https://mundo.bienvenido
 
 ### Sample code for starters and noobs
 
-#### Manual launch el engine (not necessary)
-```Java
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        MetaCore.attachMetaBase(base);
-    }
-```
-
 #### Launch a sample application
 ```Java
     MetaActivityManager.launchApp(
@@ -57,6 +48,8 @@ or
         applicationPackageName
     );
 ```  
+
+Read more documents on [https://mundo.bienvenido.top/](https://mundo.bienvenido.top/)
 
 ### Change logs
 #### Oct. 2023

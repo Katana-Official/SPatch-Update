@@ -60,6 +60,6 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation fileTree(include: ['*.aar'], dir: 'libs')
-    implementation "androidx.annotation:annotation:1.7.0"
+    implementation "androidx.annotation:annotation:1.7.1"
     implementation 'com.jakewharton.android.repackaged:dalvik-dx:11.0.0_r3'
 }
