@@ -2121,7 +2121,7 @@ public class LauncherModel extends BroadcastReceiver {
             });
             try {
                 MetaPackageManager.acquireObtainAppSplash();
-            } catch (RemoteException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
