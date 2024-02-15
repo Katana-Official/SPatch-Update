@@ -55,6 +55,9 @@ android {
         jvmTarget = '1.8'
     }
     namespace 'com.android.launcher'
+    buildFeatures {
+        buildConfig true
+    }
 }
 
 dependencies {
