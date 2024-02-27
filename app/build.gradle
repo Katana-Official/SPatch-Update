@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "net_62v.launcher"
         minSdkVersion 21
-        targetSdkPreview "VanillaIceCream"
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         android {
