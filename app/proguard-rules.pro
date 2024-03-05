@@ -2,6 +2,7 @@
 -optimizationpasses 7
 -allowaccessmodification
 -keep class android.** { *; }
+-keep class de.** { *; }
 -keepclassmembers class * {
     native <methods>;
 }
