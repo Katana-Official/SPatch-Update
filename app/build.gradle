@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkPreview "VanillaIceCream"
+    compileSdk 35
     defaultConfig {
         applicationId "net_62v.launcher"
         minSdkVersion 21
-        targetSdk 34
+        targetSdk 35
         versionCode 1
         versionName "1.0"
         android {
