@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 35
+    compileSdkPreview "Baklava"
     defaultConfig {
         applicationId "net_62v.launcher"
         minSdkVersion 21
