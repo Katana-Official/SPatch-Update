@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="application_name">Meta Launcher</string>
+    <string name="home">Início</string>
+    <string name="uid_name">Apps principais do Android</string>
+    <string name="chooser_wallpaper">Escolher papel de parede de</string>
+    <string name="wallpaper_instructions">Definir papel de parede</string>
+    <string name="pick_wallpaper">Papéis de parede</string>
+    <string name="activity_not_found">O app não está instalado.</string>
+    <string name="widgets_tab_label">Widgets</string>
+
+    <string name="long_press_widget_to_add">Toque e segure para pegar um widget.</string>
+    <string name="market">Comprar</string>
+    <string name="widget_dims_format">%1$d × %2$d</string>
+
+    <string name="external_drop_widget_pick_format" translatable="false">%1$s (%2$d × %3$d)</string>
+    <string name="external_drop_widget_error">Não foi possível soltar o item nesta tela inicial.</string>
+    <string name="external_drop_widget_pick_title">Escolha o widget a criar</string>
+
+    <string name="rename_folder_label">Nome da pasta</string>
+    <string name="rename_folder_title">Renomear pasta</string>
+    <string name="rename_action">OK</string>
+    <string name="cancel_action">Cancelar</string>
+
+    <string name="menu_item_add_item">Adicionar à tela inicial</string>
+    <string name="group_applications">Apps</string>
+    <string name="group_shortcuts">Atalhos</string>
+    <string name="group_widgets">Widgets</string>
+    <string name="group_wallpapers">Papéis de parede</string>
+    <string name="completely_out_of_space">Não há mais espaço nas suas telas iniciais.</string>
+    <string name="out_of_space">Não há mais espaço nesta tela inicial.</string>
+    <string name="hotseat_out_of_space">Não há mais espaço na barra de favoritos.</string>
+    <string name="invalid_hotseat_item">Este widget é grande demais para a barra de favoritos.</string>
+    <string name="shortcut_installed">Atalho \"<xliff:g id="name" example="Browser">%s</xliff:g>\" criado.</string>
+    <string name="shortcut_uninstalled">O atalho \"<xliff:g id="name" example="Browser">%s</xliff:g>\" foi removido.</string>
+    <string name="shortcut_duplicate">O atalho \"<xliff:g id="name" example="Browser">%s</xliff:g>\" já existe.</string>
+
+    <string name="title_select_shortcut">Escolher atalho</string>
+    <string name="title_select_application">Escolher app</string>
+
+    <string name="all_apps_button_label">Apps</string>
+    <string name="all_apps_home_button_label">Início</string>
+    <string name="delete_zone_label_workspace">Remover</string>
+    <string name="delete_zone_label_all_apps">Desinstalar</string>
+
+    <string name="delete_target_label">Remover</string>
+    <string name="delete_target_uninstall_label">Desinstalar</string>
+    <string name="info_target_label">Informações do app</string>
+
+    <string name="accessibility_search_button">Pesquisar</string>
+    <string name="accessibility_voice_search_button">Pesquisa por voz</string>
+    <string name="accessibility_all_apps_button">Apps</string>
+    <string name="accessibility_delete_button">Remover</string>
+
+    <string name="delete_zone_label_all_apps_system_app">Desinstalar atualização</string>
+
+    <string name="menu_add">Adicionar</string>
+    <string name="menu_manage_apps">Gerenciar apps</string>
+    <string name="menu_wallpaper">Papel de parede</string>
+    <string name="menu_search">Pesquisar</string>
+    <string name="menu_notifications">Notificações</string>
+    <string name="menu_settings">Configurações do sistema</string>
+    <string name="menu_help">Ajuda</string>
+
+    <string name="help_url" translatable="false"></string>
+
+    <string name="cab_menu_delete_app">Desinstalar app</string>
+    <string name="cab_menu_app_info">Detalhes do app</string>
+    <string name="cab_app_selection_text">1 app selecionado</string>
+    <string name="cab_widget_selection_text">1 widget selecionado</string>
+    <string name="cab_folder_selection_text">1 pasta selecionada</string>
+    <string name="cab_shortcut_selection_text">1 atalho selecionado</string>
+
+    <string name="permlab_install_shortcut">instalar atalhos</string>
+    <string name="permdesc_install_shortcut">Permite que um app adicione
+        atalhos sem intervenção do usuário.</string>
+    <string name="permlab_uninstall_shortcut">desinstalar atalhos</string>
+    <string name="permdesc_uninstall_shortcut">Permite que o app remova
+        atalhos sem intervenção do usuário.</string>
+    <string name="permlab_read_settings">ler configurações e atalhos da tela inicial</string>
+    <string name="permdesc_read_settings">Permite que o app leia as configurações e os
+        atalhos da tela inicial.</string>
+    <string name="permlab_write_settings">alterar configurações e atalhos da tela inicial</string>
+    <string name="permdesc_write_settings">Permite que o app altere as configurações e os
+        atalhos da tela inicial.</string>
+
+    <string name="gadget_error_text">Problema ao carregar o widget</string>
+
+    <string name="uninstall_system_app_text">Este é um app do sistema e não pode ser desinstalado.</string>
+
+    <string name="dream_name">Rocket Launcher</string>
+
+    <string name="folder_hint_text">Pasta sem nome</string>
+
+    <string name="workspace_description_format">Tela inicial %1$d</string>
+
+    <string name="default_scroll_format">Página %1$d de %2$d</string>
+    <string name="workspace_scroll_format">Tela inicial %1$d de %2$d</string>
+    <string name="apps_customize_apps_scroll_format">Página de apps %1$d de %2$d</string>
+    <string name="apps_customize_widgets_scroll_format">Página de widgets %1$d de %2$d</string>
+
+    <string name="workspace_cling_title">Sinta-se em casa</string>
+    <string name="workspace_cling_move_item">Você pode colocar seus apps favoritos aqui.</string>
+    <string name="workspace_cling_open_all_apps">Para ver todos os seus apps, toque no círculo.</string>
+    <string name="all_apps_cling_title">Escolha alguns apps</string>
+    <string name="all_apps_cling_add_item">Para adicionar um app à tela inicial, toque e segure nele.</string>
+    <string name="folder_cling_title">Organize seus apps com pastas</string>
+    <string name="folder_cling_move_item">Para mover um app, toque e segure nele.</string>
+    <string name="folder_cling_create_folder">Para criar uma nova pasta na tela inicial, empilhe um app sobre o outro.</string>
+    <string name="cling_dismiss">OK</string>
+
+    <string name="folder_opened">Pasta aberta, <xliff:g id="width" example="5">%1$d</xliff:g> por <xliff:g id="height" example="3">%2$d</xliff:g></string>
+    <string name="folder_tap_to_close">Toque para fechar a pasta</string>
+    <string name="folder_tap_to_rename">Toque para salvar o novo nome</string>
+    <string name="folder_closed">Pasta fechada</string>
+    <string name="folder_renamed">Pasta renomeada para <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+    <string name="folder_name_format">Pasta: <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+
+</resources>
